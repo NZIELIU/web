@@ -1,0 +1,63 @@
+---
+import '@astrojs/tailwind';
+
+---
+
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 0.5s ease-out both;
+  }
+
+  .hover-zoom {
+    transition: transform 0.3s ease;
+  }
+
+  .hover-zoom:hover {
+    transform: scale(1.05);
+  }
+</style>
+
+<section class="py-10 ">
+
+  <div class="text-center mb-8">
+    <h2 class="text-3xl font-bold text-gray-900 fade-in-up">Nuestra Indumentaria</h2>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    
+    <!-- Uniforme Diario -->
+    <div class="bg-white shadow-md rounded-lg p-6 text-center fade-in-up">
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">Uniforme Diario</h3>
+      <p class="text-sm text-gray-500 mb-4">Para uso regular durante la semana</p>
+      <div class="bg-gray-100 rounded-md h-48 flex items-center justify-center hover-zoom">
+        <span class="text-gray-400">[Imagen de Uniforme Diario]</span>
+      </div>
+      <p class="mt-4 text-gray-700">
+        Nuestro uniforme diario está diseñado para comodidad y formalidad, reflejando los valores de nuestra institución.
+      </p>
+    </div>
+
+    <!-- Uniforme Deportivo -->
+    <div class="bg-white shadow-md rounded-lg p-6 text-center fade-in-up">
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">Uniforme Deportivo</h3>
+      <p class="text-sm text-gray-500 mb-4">Para clases de educación física y eventos deportivos</p>
+      <div class="bg-gray-100 rounded-md h-48 flex items-center justify-center hover-zoom">
+        <span class="text-gray-400">[Imagen de Uniforme Deportivo]</span>
+      </div>
+      <p class="mt-4 text-gray-700">
+        El uniforme deportivo está diseñado para proporcionar comodidad y flexibilidad durante las actividades físicas.
+      </p>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,90 @@
+---
+import Mechanic from "@/icons/speciality/mechanic.astro";
+import Electronic from "@/icons/speciality/electronics.astro";
+import Informatic from "@/icons/speciality/informatic.astro";
+import General from "@/icons/speciality/generalSciences.astro";
+import Electricity from "@/icons/speciality/Electricity.astro";
+import Sell from "@/icons/speciality/Sell.astro";
+
+const TAGS = {
+    ELECTRONIC: {
+        class: "text-[#000000]",
+        icon: Electronic,
+    },
+    MECHANIC: {
+        class: "text-[#000000]",
+        icon: Mechanic,
+    },
+    INFORMATIC: {
+        class: "text-[#000000]",
+        icon: Informatic,
+    },
+    GENERAL: {
+        class: "text-[#000000]",
+        icon: General,
+    },
+    ELECTRICITY: {
+        class: "text-[#000000]",
+        icon: Electricity,
+    },
+    SELL: {
+        class: "text-[#000000]",
+        icon: Sell,
+    },
+};
+
+const SPECIALITY = [
+    {
+        title: "Electricidad",
+        icon: [TAGS.ELECTRICITY],
+        content:
+            "Instalar y mantener sistemas eléctricos, incluyendo cableado, iluminación y maquinaria, cumpliendo con los estándares de calidad, seguridad y normativas ambientales en diversos entornos de edificaciones.",
+    },
+    {
+        title: "Electromecánica Automotriz",
+        icon: [TAGS.MECHANIC],
+        content:
+            "Realizar la instalación y mantenimiento de sistemas electrónicos automotrices, incluyendo diagnóstico, control, inyección y encendido, cumpliendo con los estándares de calidad, seguridad y ambientales en diversos vehículos modernos.",
+    },
+    {
+        title: "Electrónica",
+        icon: [TAGS.ELECTRONIC],
+        content:
+            "Realizar la instalación y mantenimiento de sistemas electrónicos, abarcando dispositivos de control, comunicación y automatización, cumpliendo con estándares de calidad, seguridad y normativas ambientales en diversas aplicaciones.",
+    },
+    {
+        title: "Informática",
+        icon: [TAGS.INFORMATIC],
+        content:
+            "Optimizar el tratamiento de la información mediante el procesamiento automático, utilizando lenguajes de programación, bases de datos, herramientas ofimáticas, redes informáticas, herramientas web, sistemas operativos y soporte técnico; proponiendo soluciones.",
+    },
+    {
+        title: "Comercialización y Ventas",
+        icon: [TAGS.SELL],
+        content:
+            "Ejecutar operaciones de almacenamiento y expedición de mercaderías, desarrollo del proceso de venta de productos y/o servicios y la aplicación de técnicas de animación en el punto de venta, utilizando la normativa vigente y herramientas tecnológicas con eficiencia y responsabilidad social.",
+    },
+    {
+        title: "Ciencias Generales",
+        icon: [TAGS.GENERAL],
+        content:
+            "Ofrece una formación en áreas científico-humanísticas, mediante las asignaturas del tronco común, y podrán tener componentes y menciones específicas y especializadas. ",
+    },
+];
+---
+
+<article class="grid gap-x-10 gap-y-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      SPECIALITY.map(({ title, icon, content }) => (
+        <div class="text-black text-left block max-w-sm p-6 bg-white  border border-gray-500 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300 ease-in-out cursor-pointer">
+          {icon.map((tag) => (
+            <tag.icon class="text-black mb-4 w-12 h-12 my-2 mx-auto" />
+          ))}
+          <h3 class="text-xl mb-2 font-medium text-black">{title}</h3>
+          <p class="font-normal text-gray-400">
+            {content}
+          </p>
+        </div>
+      ))
+    }
+  </article>

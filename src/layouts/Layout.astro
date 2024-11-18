@@ -1,0 +1,50 @@
+---
+import Navbar from "@/Navbar.astro";
+import Footer from "@/Footer.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="../../public/volta_logo.png" />
+    <meta name="generator" content={Astro.generator} />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <title>{title}</title>
+  </head>
+  <body
+    class="from-blue-400 via-yellow-400 to-red-400 mb-2 flex w-full items-center justify-center flex-col"
+  >
+    <Navbar />
+    <slot />
+    <Footer />
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"
+  ></script>
+  </html>
+  <style is:global>
+    * {
+      border: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    *::-webkit-scrollbar {
+      display: none;
+    }
+    body {
+      background-color: white; 
+    }
+  </style>
