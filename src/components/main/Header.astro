@@ -1,0 +1,42 @@
+---
+const programs = [
+  {
+    imgSrc: "/user.jpeg",
+    name: "Primaria",
+    description: "En el ciclo de Primaria, ofrecemos un enfoque integral para que los estudiantes desarrollen habilidades fundamentales en lectura, escritura, matemáticas y ciencias. Nuestro objetivo es formar una base sólida para el aprendizaje y la creatividad, brindando un entorno seguro y estimulante que promueve el crecimiento personal y académico desde los primeros años de escolaridad.",
+  },
+  {
+    imgSrc: "/user.jpeg",
+    name: "Secundaria",
+    description: "La Secundaria es la etapa donde los estudiantes comienzan a descubrir sus intereses académicos y profesionales. A través de un enfoque práctico, fomentamos el pensamiento crítico y la resolución de problemas en áreas como matemáticas, ciencias, tecnología y humanidades. Además, los estudiantes desarrollan habilidades en programación y sistemas informáticos, preparándolos para los retos del siglo XXI.",
+  },
+  {
+    imgSrc: "/user.jpeg",
+    name: "Bachillerato",
+    description: "Nuestro programa de Bachillerato permite a los estudiantes explorar áreas especializadas, enfocándose en sus talentos y vocaciones. Ofrecemos un currículo que combina ciencias, artes y humanidades, apoyado por proyectos innovadores que fomentan la creatividad y el pensamiento independiente. Con un enfoque en la preparación universitaria, brindamos las herramientas necesarias para que nuestros estudiantes sean líderes en el ámbito académico y profesional.",
+  }
+];
+---
+
+<div class="text-primary container mx-auto px-6 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Bienvenidos a la Unidad Educativa Alessandro Volta.</h1>
+</div>
+
+<section class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-5xl font-bold text-center mb-8">Ciclos Escolares</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {programs.map((program) => (
+          <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center transition-transform duration-300 ease-in-out hover:shadow-2xl hover:scale-105">
+            {/* Título encima de la imagen */}
+            <h3 class="text-2xl font-bold text-center mb-8">{program.name}</h3>
+            
+            {/* Imagen redonda y más grande */}
+            <img src={program.imgSrc} alt={program.name} class="mb-4 w-40 h-40 object-cover rounded-full border-4 border-primary" />
+            
+            <p class="text-gray-600">{program.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>

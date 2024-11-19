@@ -6,16 +6,21 @@ import Accordion from "@/main/Accordion.astro";
 import Layout from "../layouts/Layout.astro";
 import ChatBot from "@/main/ChatBot.astro";
 import Carousel from "@/main/Carousel.astro";
-import Uniform from "@/main/Uniform.astro";
-import Contacto from "./contacto.astro";
+import Cta from "@/main/Cta.astro";
+import Calendario from "@/main/Calendario.astro";
+import Hero from "@/main/Hero.astro"
+import Header from "@/main/Header.astro";
 ---
 
 <Layout title="Alessandro Volta ">
   <Carousel />
   <main>
     <hr class="py-10">
+    <Header/>
+    <hr class="py-10">
+    <Hero/>
+    <hr class="py-10">
 	  <Card/>
-
     <hr class="py-10">  
     <KeyMetrics />
     <hr class="py-10">
@@ -23,7 +28,11 @@ import Contacto from "./contacto.astro";
     <hr class="py-10">
     <Standard />
     <hr class="py-10">
+    <Cta />
+    <hr class="py-10">
     <ChatBot />
+    <hr class="py-10">
+    <Calendario/>
   </main>
   
 </Layout>

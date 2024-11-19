@@ -73,7 +73,11 @@ const SPECIALITY = [
 ];
 ---
 
-<article class="grid gap-x-10 gap-y-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+<div class="text-primary container mx-auto px-6 text-left">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Especialidades Técnicas</h2>
+</div>
+<br>
+<article class="mb-10 grid gap-x-10 gap-y-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {
       SPECIALITY.map(({ title, icon, content }) => (
         <div class="text-black text-left block max-w-sm p-6 bg-white  border border-gray-500 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300 ease-in-out cursor-pointer">

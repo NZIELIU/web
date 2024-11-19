@@ -1,0 +1,24 @@
+---
+// src/components/Features.astro
+const features = [
+  { title: "Excelencia Académica", description: "Programas educativos de alta calidad", icon: "🎓" },
+  { title: "Instalaciones Modernas", description: "Espacios diseñados para el aprendizaje", icon: "🏫" },
+  { title: "Actividades Extracurriculares", description: "Desarrollo integral del estudiante", icon: "🏅" },
+  { title: "Tecnología Avanzada", description: "Herramientas para el futuro", icon: "💻" },
+];
+---
+
+<section class="py-16 bg-gray-100">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">¿Por qué elegirnos?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {features.map((feature) => (
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+          <div class="text-4xl mb-4">{feature.icon}</div>
+          <h3 class="text-xl font-semibold mb-2">{feature.title}</h3>
+          <p class="text-gray-600">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
