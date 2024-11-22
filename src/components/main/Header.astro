@@ -14,6 +14,11 @@ const programs = [
     imgSrc: "/user.jpeg",
     name: "Bachillerato",
     description: "Nuestro programa de Bachillerato permite a los estudiantes explorar áreas especializadas, enfocándose en sus talentos y vocaciones. Ofrecemos un currículo que combina ciencias, artes y humanidades, apoyado por proyectos innovadores que fomentan la creatividad y el pensamiento independiente. Con un enfoque en la preparación universitaria, brindamos las herramientas necesarias para que nuestros estudiantes sean líderes en el ámbito académico y profesional.",
+  },
+  {
+    imgSrc: "/user.jpeg",
+    name: "Sistema 2x1",
+    description: "Nuestro programa 2x1 ofrece una modalidad intensiva para adultos que desean completar tanto la secundaria como el bachillerato en un tiempo reducido. Estudiando ambos niveles al mismo tiempo, los estudiantes pueden avanzar rápidamente sin comprometer su trabajo u otras responsabilidades. Con horarios nocturnos, podrás obtener dos títulos en menos tiempo y abrir nuevas oportunidades académicas y laborales. ¡Un camino rápido hacia tu futuro educativo y profesional!",
   }
 ];
 ---
@@ -22,7 +27,7 @@ const programs = [
   <h1 class="text-4xl md:text-5xl font-bold mb-4">Bienvenidos a la Unidad Educativa Alessandro Volta.</h1>
 </div>
 
-<div class="relative overflow-hidden bg-white">
+<div class="relative overflow-hidden">
   <div class="container px-4 py-16 mx-auto sm:px-6 lg:px-8">
     <div class="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
       <div class="relative">
@@ -38,20 +43,18 @@ const programs = [
           </div>
         </div>
       </div>
-
       <div class="space-y-8">
         <div>
           <p class="inline-block px-4 py-1.5 text-sm font-medium text-blue-600 bg-blue-50 rounded-full">
             Educación Para Todos
           </p>
           <h1 class="mt-4 text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl">
-            Aprende Sobre Nuestra Cultura de Trabajo En Devschool
+            Descubre Nuestra Cultura Educativa en Alessandro Volta
           </h1>
           <p class="mt-4 text-lg text-gray-600">
-            Como palabra de nuestro corazón, nos encanta dedicar para los Niños las cosas valiosas de la Vida. Una gran educación es imprescindible para un desarrollo sólido tanto en el alma como en la mente de los niños. Vamos con niños a jugar, aprender y crecer mejor.
+            Como palabra de nuestro corazón, nos apasiona ofrecerles las herramientas necesarias para que puedan alcanzar su máximo potencial. A través de un entorno de aprendizaje desafiante y motivador, acompañamos a nuestros estudiantes en su camino para jugar, aprender y crecer, preparándolos para los retos del mañana.
           </p>
         </div>
-        
         <div class="grid gap-4 sm:grid-cols-2">
           <div class="flex items-center gap-3">
             <!-- Icono de transporte con SVG -->
@@ -82,38 +85,26 @@ const programs = [
             <span class="text-gray-700">Mejor Cuidado</span>
           </div>
         </div>
-        
         <div>
-          <p class="mb-4 text-gray-600">
-            Como palabra de nuestro corazón, nos encanta dedicar para los Niños las cosas valiosas de la Vida. Vamos con niños a jugar, aprender y crecer mejor.
+          <p class="mb-4 text-gray-600">En la Unidad Educativa Alessandro Volta, nos apasiona brindar a nuestros jóvenes las herramientas para un futuro brillante. Juntos, aprendemos, crecemos y nos preparamos para los desafíos que vendrán.
           </p>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
 <section class="py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-5xl font-bold text-center mb-8">Ciclos Escolares</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {programs.map((program) => (
-          <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center transition-transform duration-300 ease-in-out hover:shadow-2xl hover:scale-105">
-            {/* Título encima de la imagen */}
-            <h3 class="text-2xl font-bold text-center mb-8">{program.name}</h3>
-            
-            {/* Imagen redonda y más grande */}
-            <img src={program.imgSrc} alt={program.name} class="mb-4 w-40 h-40 object-cover rounded-full border-4 border-primary" />
-            
-            <p class="text-gray-600">{program.description}</p>
-          </div>
-        ))}
-      </div>
+  <div class="container mx-auto px-4">
+    <h2 class="text-5xl font-bold text-center mb-16">Ciclos Escolares</h2>
+    <div class="flex justify-center gap-5">
+      <!-- Mapeando los programas para generar las tarjetas -->
+      {programs.map((program) => (
+        <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center transition-transform duration-300 ease-in-out hover:shadow-2xl hover:scale-105 w-full">
+          <h3 class="text-2xl font-bold text-center mb-8">{program.name}</h3>
+          <img src={program.imgSrc} alt={program.name} class="mb-4 w-40 h-40 object-cover rounded-full border-4 border-primary" />
+          <p class="text-gray-600 text-left">{program.description}</p>
+        </div>
+      ))}
     </div>
-  </section>
+  </div>
+</section>
