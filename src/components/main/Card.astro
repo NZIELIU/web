@@ -73,22 +73,22 @@ const SPECIALITY = [
 ];
 ---
 
-<div class="text-primary container mx-auto px-6 text-left">
+<!-- Contenedor principal centrado -->
+<div class="container mx-auto px-6 text-left">
     <h2 class="text-4xl md:text-5xl font-bold mb-4">Especialidades Técnicas</h2>
 </div>
+
 <br>
-<article class="mb-10 grid gap-x-10 gap-y-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-    {
-      SPECIALITY.map(({ title, icon, content }) => (
-        <div class="text-black text-left block max-w-sm p-6 bg-white  border border-gray-500 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300 ease-in-out cursor-pointer">
-          {icon.map((tag) => (
-            <tag.icon class="text-black mb-4 w-12 h-12 my-2 mx-auto" />
-          ))}
-          <h3 class="text-xl mb-2 font-medium text-black">{title}</h3>
-          <p class="font-normal text-gray-400">
-            {content}
-          </p>
+
+<!-- Sección de especialidades con una cuadrícula responsiva -->
+<article class="mb-10 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto px-4">
+    {SPECIALITY.map(({ title, icon, content }) => (
+        <div class="text-black text-left block max-w-sm p-6 bg-white border border-gray-500 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300 ease-in-out cursor-pointer mx-auto">
+            {icon.map((tag) => (
+                <tag.icon class="text-black mb-4 w-12 h-12 my-2 mx-auto" />
+            ))}
+            <h3 class="text-xl mb-2 font-medium text-black text-center">{title}</h3>
+            <p class="font-normal text-gray-400 text-center">{content}</p>
         </div>
-      ))
-    }
-  </article>
+    ))}
+</article>

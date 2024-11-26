@@ -1,218 +1,208 @@
+---
+---
 <div class="relative bg-gray-900 py-16 mb-12 rounded-2xl">
   <div class="absolute inset-0">
-      <img
-          src="/volta.jpeg?height=800&width=1200"
-          alt=""
-          class="h-full w-full object-cover opacity-20"
-      />
+    <img
+      src="/volta.jpeg?height=800&width=1200"
+      alt=""
+      class="h-full w-full object-cover opacity-20"
+    />
   </div>
-  
-  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
-    <div class="text-left grid grid-cols-1 gap-4 sm:grid-cols-4 sm:grid-rows-[auto_auto]">
-        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl sm:col-start-1 sm:row-start-1 ">
+
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Sección de Contacto -->
+      <div class="flex flex-col h-full">
+        <div class="text-left mb-6">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white">
             Contáctanos
           </h2>
-          <p class="text-lg leading-6 text-gray-300 sm:col-start-1 sm:row-start-2 sm:mt-2 sm:col-span-2">
-            We use an agile approach to test assumptions and 
-            <br>connect with the needs of your audience early and often.
+          <p class="text-base sm:text-lg leading-6 text-gray-300 mt-2">
+            We use an agile approach to test assumptions and connect with the needs of your audience early and often.
           </p>
-        
-          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl sm:col-start-3 sm:row-start-1">
-            Direccion
-            </h2>
-
-            <p class="text-lg leading-6 text-gray-300 sm:col-start-3 sm:row-start-2 sm:mt-2 sm:col-span-2">
-                We use an agile approach to test assumptions and 
-                <br>connect with the needs of your audience early and often.
-              </p>
-
         </div>
 
-    
-      <!-- Contenedor para los formularios, usando flexbox -->
-      <div class="mt-12 flex gap-8"> <!-- Flex con espacio entre los formularios -->
-          <!-- Primer formulario -->
-          <div class="w-full max-w-xl">
-              <div class="rounded-lg bg-white p-8 shadow-xl">
-                  <form action="https://formspree.io/f/movqlnwl" method="POST" class="space-y-6">
-                      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                          <div>
-                              <label for="firstName" class="block text-sm font-medium text-gray-700">Nombre</label>
-                              <input
-                                  type="text"
-                                  name="firstName"
-                                  id="firstName"
-                                  placeholder="Bonnie"
-                                  required
-                                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
-                              />
-                          </div>
-
-                          <div>
-                              <label for="lastName" class="block text-sm font-medium text-gray-700">Apellido</label>
-                              <input
-                                  type="text"
-                                  name="lastName"
-                                  id="lastName"
-                                  placeholder="Green"
-                                  required
-                                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
-                              />
-                          </div>
-                      </div>
-
-                      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                          <div>
-                              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                              <input
-                                  type="email"
-                                  name="email"
-                                  id="email"
-                                  required
-                                  placeholder="ejemplo@gmail.com"
-                                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
-                              />
-                          </div>
-
-                          <div>
-                              <label for="phone" class="block text-sm font-medium text-gray-700">Teléfono</label>
-                              <input
-                                  type="tel"
-                                  name="phone"
-                                  id="phone"
-                                  required
-                                  placeholder="0984802345"
-                                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
-                              />
-                          </div>
-                      </div>
-
-                      <div>
-                          <label for="message" class="block text-sm font-medium text-gray-700">Tu mensaje</label>
-                          <textarea
-                              id="message"
-                              name="message"
-                              rows="4"
-                              required
-                              placeholder="Deja un comentario..."
-                              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
-                          ></textarea>
-                      </div>
-                      
-                      <p class="text-xs text-gray-500">
-                          Al enviar este formulario usted acepta nuestros <a href="#" class="text-blue-500 underline"> términos y condiciones</a> y nuestra <a href="#" class="text-blue-500 underline">política de privacidad</a>.
-                      </p> 
-
-                      <button
-                          type="submit"
-                          class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition"
-                      >
-                          Enviar
-                      </button>
-                  </form>
+        <div class="rounded-lg bg-white p-4 sm:p-6 shadow-xl flex-1">
+          <form action="https://formspree.io/f/movqlnwl" method="POST" class="space-y-4 sm:space-y-5">
+            <div class="grid grid-cols-1 gap-4 sm:gap-5 sm:grid-cols-2">
+              <div>
+                <label for="firstName" class="block text-sm font-medium text-gray-700">Nombre</label>
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  placeholder="Bonnie"
+                  required
+                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary text-sm sm:text-base"
+                />
               </div>
-          </div>
-
-          <!-- Segundo formulario para la dirección -->
-          
-
-          <div class="w-full max-w-xl mx-auto">
-            <div class="bg-gray-100 w-full p-8 rounded-lg shadow-sm min-h-[453px] flex flex-col space-y-6">
-        
-                <!-- Dirección -->
-                <div class="flex items-start gap-10 ">
-                    <div class="w-6 h-6 mt-10">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-700" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h2 class="text-blue-600 font-medium mt-10 text-[1.10rem] md:text-[1.10rem]">Dirección</h2>
-                        <a href="https://maps.app.goo.gl/xBf2bjn1v3FMXdte6" class="text-gray-700 hover:text-blue-600 transition-colors text-[1rem] md:text-[1rem]">Av. Jacinto Cortez Jhayya, y, Santo Domingo</a>
-                    </div>
-                </div>
-        
-                <!-- Correo electrónico -->
-                <div class="flex items-start gap-10">
-                    <div class="w-6 h-6 mt-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-700" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="20" height="16" x="2" y="4" rx="2"/>
-                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h2 class="text-blue-600 font-medium mb-1 text-[1.10rem] md:text-[1.10rem]">Correo electrónico:</h2>
-                        <a href="mailto:Alessandrovolta@gmail.com" class="text-gray-700 hover:text-blue-600 transition-colors text-[1rem] md:text-[1rem]">
-                            Alessandrovolta@gmail.com
-                        </a>
-                    </div>
-                </div>
-        
-                <!-- Teléfono -->
-                <div class="flex items-start gap-10">
-                    <div class="w-6 h-6 mt-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-700" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h2 class="text-blue-600 font-medium mb-1 text-[1.10rem] md:text-[1.10rem]">Número de Teléfono:</h2>
-                        <a href="tel:0979875182" class="text-gray-700 hover:text-blue-600 transition-colors text-[1rem] md:text-[1rem]">
-                            0979875182
-                        </a>
-                    </div>
-                </div>
-        
-                <!-- Horario de Atención -->
-                <div class="flex items-start gap-10">
-                    <div class="w-6 h-6 mt-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-700" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h2 class="text-blue-600 font-medium mb-1 text-[1.10rem] md:text-[1.10rem]">Horario de Atención</h2>
-                        <p class="text-gray-700 text-[1rem] md:text-[1rem]">Lun - Vie: 8:00 AM - 5:30 PM</p>
-                    </div>
-                </div>
+              <div>
+                <label for="lastName" class="block text-sm font-medium text-gray-700">Apellido</label>
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  placeholder="Green"
+                  required
+                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary text-sm sm:text-base"
+                />
+              </div>
             </div>
+            <div class="grid grid-cols-1 gap-4 sm:gap-5 sm:grid-cols-2">
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  placeholder="ejemplo@gmail.com"
+                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary text-sm sm:text-base"
+                />
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700">Teléfono</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  required
+                  placeholder="0984802345"
+                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary text-sm sm:text-base"
+                />
+              </div>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700">Tu mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="3"
+                required
+                placeholder="Deja un comentario..."
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary text-sm sm:text-base"
+              ></textarea>
+            </div>
+            <p class="text-xs text-gray-500">
+              Al enviar este formulario usted acepta nuestros <a href="#" class="text-blue-500 underline"> términos y condiciones</a> y nuestra <a href="#" class="text-blue-500 underline">política de privacidad</a>.
+            </p>
+            <button
+              type="submit"
+              class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition text-sm sm:text-base"
+            >
+              Enviar
+            </button>
+          </form>
         </div>
-        
       </div>
+
+      <!-- Sección de Dirección -->
+      <div class="flex flex-col h-full">
+        <div class="text-left mb-6">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white">
+            Dirección
+          </h2>
+          <p class="text-base sm:text-lg leading-6 text-gray-300 mt-2">
+            We use an agile approach to test assumptions and connect with the needs of your audience early and often.
+          </p>
+        </div>
+
+        <div class="bg-gray-100 p-4 sm:p-6 rounded-lg shadow-sm flex-1">
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="w-6 h-6 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-700" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-blue-600 font-medium text-lg sm:text-xl">Dirección</h3>
+                <a href="https://maps.app.goo.gl/xBf2bjn1v3FMXdte6" class="text-gray-700 hover:text-blue-600 transition-colors text-sm sm:text-base">Av. Jacinto Cortez Jhayya y Santo Domingo</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-6 h-6 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-700" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-blue-600 font-medium text-lg sm:text-xl">Correo electrónico</h3>
+                <a href="mailto:Alessandrovolta@gmail.com" class="text-gray-700 hover:text-blue-600 transition-colors text-sm sm:text-base">
+                  Alessandrovolta@gmail.com
+                </a>
+              </div>
+            </div>
+    
+          <!-- Teléfono -->
+          <div class="flex items-start gap-4 sm:gap-6">
+            <div class="w-6 h-6 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-700" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-blue-600 font-medium mb-1 text-lg sm:text-xl">Número de Teléfono:</h2>
+              <a href="tel:0979875182" class="text-gray-700 hover:text-blue-600 transition-colors text-sm sm:text-base">
+                0979875182
+              </a>
+            </div>
+          </div>
+    
+          <!-- Horario de Atención -->
+          <div class="flex items-start gap-4 sm:gap-6">
+            <div class="w-6 h-6 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-700" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-blue-600 font-medium mb-1 text-lg sm:text-xl">Horario de Atención</h2>
+              <p class="text-gray-700 text-sm sm:text-base">Lun - Vie: 8:00 AM - 5:30 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   
-<div class="mt-12 grid grid-cols-1 gap-px sm:grid-cols-5 ">
-  <div class="text-center sm:col-start-2 ">
-    <div class="mx-auto h-12 w-12 rounded-lg bg-white/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
+  <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-5">
+    <div class="text-center sm:col-start-1 lg:col-start-2">
+      <div class="mx-auto h-12 w-12 rounded-lg bg-white/10 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      </div>
+      <h3 class="mt-2 text-base sm:text-lg font-medium text-white">Correo Electrónico:</h3>
+      <a href="mailto:Alessandrovolta@gmail.com" class="mt-2 block text-sm sm:text-base text-white hover:underline">Alessandrovolta@gmail.com</a>
     </div>
-    <h3 class="mt-2 text-lg font-medium text-white">Correo Electrónico:</h3>
-    <a href="mailto:Alessandrovolta@gmail.com" class="mt-2 block text-white hover:underline">Alessandrovolta@gmail.com</a>
-  </div>
 
-  <div class="text-center">
-    <div class="mx-auto h-12 w-12 rounded-lg bg-white/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-      </svg>
+    <div class="text-center">
+      <div class="mx-auto h-12 w-12 rounded-lg bg-white/10 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+      </div>
+      <h3 class="mt-2 text-base sm:text-lg font-medium text-white">Llamenos:</h3>
+      <a href="tel:+593 968392559" class="mt-2 block text-sm sm:text-base text-white hover:underline">+593 0979875182</a>
     </div>
-    <h3 class="mt-2 text-lg font-medium text-white">Llamenos:</h3>
-    <a href="tel:+593 968392559" class="mt-2 block text-white hover:underline">+593 0979875182</a>
-  </div>
 
-  <div class="text-center">
-    <div class="mx-auto h-12 w-12 rounded-lg bg-white/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="3em" height="2em" viewBox="0 0 20 20"><g fill="currentColor"><path fill-rule="evenodd" d="M10 8.5a2 2 0 1 0 0-4a2 2 0 0 0 0 4m0-3a1 1 0 1 1 0 2a1 1 0 0 1 0-2" clip-rule="evenodd"/><path fill-rule="evenodd" d="M5.5 6.286C5.5 8.959 8.153 13.5 10 13.5c1.848 0 4.5-4.541 4.5-7.214C14.5 3.65 12.493 1.5 10 1.5S5.5 3.65 5.5 6.286m8 0c0 2.193-2.348 6.214-3.5 6.214c-1.151 0-3.5-4.02-3.5-6.214C6.5 4.187 8.075 2.5 10 2.5s3.5 1.687 3.5 3.786" clip-rule="evenodd"/><path d="M13.435 9.14a.5.5 0 0 1 .369-.929a3 3 0 0 1 1.74 1.84l1.334 4A3 3 0 0 1 14.03 18H5.97a3 3 0 0 1-2.846-3.949l1.333-4A3 3 0 0 1 6.24 8.194a.5.5 0 1 1 .355.935a2 2 0 0 0-1.19 1.239l-1.333 4A2 2 0 0 0 5.97 17h8.062a2 2 0 0 0 1.897-2.633l-1.332-4a2 2 0 0 0-1.16-1.226"/></g></svg>
+    <div class="text-center">
+      <div class="mx-auto h-12 w-12 rounded-lg bg-white/10 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24" viewBox="0 0 20 20">
+          <g fill="currentColor">
+            <path fill-rule="evenodd" d="M10 8.5a2 2 0 1 0 0-4a2 2 0 0 0 0 4m0-3a1 1 0 1 1 0 2a1 1 0 0 1 0-2" clip-rule="evenodd"/>
+            <path fill-rule="evenodd" d="M5.5 6.286C5.5 8.959 8.153 13.5 10 13.5c1.848 0 4.5-4.541 4.5-7.214C14.5 3.65 12.493 1.5 10 1.5S5.5 3.65 5.5 6.286m8 0c0 2.193-2.348 6.214-3.5 6.214c-1.151 0-3.5-4.02-3.5-6.214C6.5 4.187 8.075 2.5 10 2.5s3.5 1.687 3.5 3.786" clip-rule="evenodd"/>
+            <path d="M13.435 9.14a.5.5 0 0 1 .369-.929a3 3 0 0 1 1.74 1.84l1.334 4A3 3 0 0 1 14.03 18H5.97a3 3 0 0 1-2.846-3.949l1.333-4A3 3 0 0 1 6.24 8.194a.5.5 0 1 1 .355.935a2 2 0 0 0-1.19 1.239l-1.333 4A2 2 0 0 0 5.97 17h8.062a2 2 0 0 0 1.897-2.633l-1.332-4a2 2 0 0 0-1.16-1.226"/>
+          </g>
+        </svg>
+      </div>
+      <h3 class="mt-2 text-base sm:text-lg font-medium text-white">Dirección:</h3>
+      <a href="https://maps.app.goo.gl/xBf2bjn1v3FMXdte6" class="mt-2 block text-sm sm:text-base text-white hover:underline">Av. Jacinto Cortez Jhayya <br> y Santo Domingo</a>
     </div>
-    <h3 class="mt-2 text-lg font-medium text-white">Dirección:</h3>
-    <a href="https://maps.app.goo.gl/xBf2bjn1v3FMXdte6" class="mt-2 block text-white hover:underline">Av. Jacinto Cortez Jhayya <br> y Santo Domingo</a>
   </div>
 </div>
-
-
-  
-

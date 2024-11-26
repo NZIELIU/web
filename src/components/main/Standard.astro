@@ -1,4 +1,5 @@
 ---
+// src/components/Abanderados.astro
 const abanderados = [
   {
     nombre: "Juan Pérez",
@@ -15,19 +16,20 @@ const abanderados = [
 ];
 ---
 
-<section class="text-center m-[auto] w-[1000px]">
+<section class="text-center mx-auto px-6 py-16">
   <h2 class="text-3xl font-bold text-black mb-4">Nuestros Abanderados</h2>
-  <h3 class="font-bold text-gray-500 mb-8">Conoce a los estudiantes destacados que han sido elegidos como abanderados de nuestro colegio.</h3>
+  <h3 class="font-semibold text-gray-500 mb-8">Conoce a los estudiantes destacados que han sido elegidos como abanderados de nuestro colegio.</h3>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     {abanderados.map((abanderado) => (
-      <div class="text-center transition-transform duration-300 transform hover:scale-105 hover:bg-dark  rounded-lg">
+      <div class="transition-transform duration-300 transform hover:scale-105 hover:bg-gray-200 rounded-lg p-6">
         <div class="w-24 h-24 mx-auto rounded-full bg-gray-300 border-4 border-gray-600 shadow-md transition duration-300 transform hover:scale-110">
           {/* Aquí puedes agregar una imagen */}
         </div>
-        <h3 class="text-xl text-dark font-semibold mt-4">{abanderado.nombre}</h3>
-        <p class="text-dark mt-2">{abanderado.descripcion}</p>
+        <h3 class="text-xl text-gray-900 font-semibold mt-4">{abanderado.nombre}</h3>
+        <p class="text-gray-700 mt-2">{abanderado.descripcion}</p>
       </div>
     ))}
   </div>
 </section>
+

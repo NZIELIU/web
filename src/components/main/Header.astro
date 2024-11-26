@@ -55,7 +55,7 @@ const programs = [
             Como palabra de nuestro corazón, nos apasiona ofrecerles las herramientas necesarias para que puedan alcanzar su máximo potencial. A través de un entorno de aprendizaje desafiante y motivador, acompañamos a nuestros estudiantes en su camino para jugar, aprender y crecer, preparándolos para los retos del mañana.
           </p>
         </div>
-        <div class="grid gap-4 sm:grid-cols-2">
+        <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
           <div class="flex items-center gap-3">
             <!-- Icono de transporte con SVG -->
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -86,20 +86,20 @@ const programs = [
           </div>
         </div>
         <div>
-          <p class="mb-4 text-gray-600">En la Unidad Educativa Alessandro Volta, nos apasiona brindar a nuestros jóvenes las herramientas para un futuro brillante. Juntos, aprendemos, crecemos y nos preparamos para los desafíos que vendrán.
-          </p>
+          <p class="mb-4 text-gray-600">En la Unidad Educativa Alessandro Volta, nos apasiona brindar a nuestros jóvenes las herramientas para un futuro brillante. Juntos, aprendemos, crecemos y nos preparamos para los desafíos que vendrán.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 <section class="py-12">
   <div class="container mx-auto px-4">
     <h2 class="text-5xl font-bold text-center mb-16">Ciclos Escolares</h2>
-    <div class="flex justify-center gap-5">
+    <div class="grid gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       <!-- Mapeando los programas para generar las tarjetas -->
       {programs.map((program) => (
-        <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center transition-transform duration-300 ease-in-out hover:shadow-2xl hover:scale-105 w-full">
+        <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center transition-transform duration-300 ease-in-out hover:shadow-2xl hover:scale-105">
           <h3 class="text-2xl font-bold text-center mb-8">{program.name}</h3>
           <img src={program.imgSrc} alt={program.name} class="mb-4 w-40 h-40 object-cover rounded-full border-4 border-primary" />
           <p class="text-gray-600 text-left">{program.description}</p>
