@@ -1,40 +1,91 @@
-
-<section class="py-10">
-  <div class="text-center mb-8">
-    <h2 class="text-3xl font-bold text-gray-900 animate__fadeInUp">Nuestra Indumentaria</h2>
+---
+---
+<section class="py-16">
+  <div class="text-center mb-12">
+    <h2 class="text-5xl font-extrabold text-gray-900 animate__animated animate__fadeInUp">Nuestra Indumentaria</h2>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-
+  <!-- Uniformes -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
     <!-- Uniforme Diario -->
-    <div class="bg-white shadow-md rounded-lg p-6 text-center animate__fadeInUp">
-      <h3 class="text-xl font-semibold text-gray-900 mb-2">Uniforme Diario</h3>
+    <div class="bg-white shadow-xl rounded-lg p-8 text-center transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:translate-y-2">
+      <h3 class="text-2xl font-bold text-gray-900 mb-2">Uniforme Diario</h3>
       <p class="text-sm text-gray-500 mb-4">Para uso regular durante la semana</p>
-      <div class="bg-gray-100 rounded-md h-48 flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-105">
+      <div class="bg-gray-100 rounded-md h-48 flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl">
         <span class="text-gray-400">[Imagen de Uniforme Diario]</span>
       </div>
-      <p class="mt-4 text-gray-700">
+      <p class="mt-6 text-gray-700">
         Nuestro uniforme diario está diseñado para comodidad y formalidad, reflejando los valores de nuestra institución.
       </p>
     </div>
 
     <!-- Uniforme Deportivo -->
-    <div class="bg-white shadow-md rounded-lg p-6 text-center animate__fadeInUp">
-      <h3 class="text-xl font-semibold text-gray-900 mb-2">Uniforme Deportivo</h3>
+    <div class="bg-white shadow-xl rounded-lg p-8 text-center transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:translate-y-2">
+      <h3 class="text-2xl font-bold text-gray-900 mb-2">Uniforme Deportivo</h3>
       <p class="text-sm text-gray-500 mb-4">Para clases de educación física y eventos deportivos</p>
-      <div class="bg-gray-100 rounded-md h-48 flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-105">
+      <div class="bg-gray-100 rounded-md h-48 flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl">
         <span class="text-gray-400">[Imagen de Uniforme Deportivo]</span>
       </div>
-      <p class="mt-4 text-gray-700">
+      <p class="mt-6 text-gray-700">
         El uniforme deportivo está diseñado para proporcionar comodidad y flexibilidad durante las actividades físicas.
       </p>
     </div>
-
   </div>
 
-  <div class="max-w-5xl mx-auto p-6 rounded-lg">
-    <p class="text-gray-700">
-      Aquí puedes ver más información sobre los uniformes que ofrecemos. Este es un ejemplo de cómo podría lucir la página de detalles.
-    </p>
+  <!-- Tabla de Precios -->
+  <div class="max-w-6xl mx-auto mt-12 p-8 bg-white shadow-xl rounded-lg">
+    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Tabla de Precios</h3>
+    <table class="table-auto w-full text-left border border-gray-300 rounded-lg">
+      <thead>
+        <tr class="bg-gray-100">
+          <th class="px-6 py-3 text-gray-700">Uniforme</th>
+          <th class="px-6 py-3 text-gray-700">Precio</th>
+          <th class="px-6 py-3 text-gray-700">Tallas Disponibles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="transition-all duration-300 hover:bg-gray-50">
+          <td class="border px-6 py-4">Uniforme Diario</td>
+          <td class="border px-6 py-4">$25</td>
+          <td class="border px-6 py-4">S, M, L, XL</td>
+        </tr>
+        <tr class="transition-all duration-300 hover:bg-gray-50">
+          <td class="border px-6 py-4">Uniforme Deportivo</td>
+          <td class="border px-6 py-4">$30</td>
+          <td class="border px-6 py-4">S, M, L, XL</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Instrucciones de Cuidado -->
+  <div class="max-w-6xl mx-auto mt-12 p-8 bg-white shadow-xl rounded-lg">
+    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Instrucciones de Cuidado</h3>
+    <ul class="list-disc list-inside text-gray-700 space-y-4">
+      <li>Lavar a mano o en máquina con agua fría.</li>
+      <li>Evitar el uso de blanqueador.</li>
+      <li>Planchar a baja temperatura.</li>
+      <li>Guardar en un lugar fresco y seco para evitar deterioros.</li>
+    </ul>
+  </div>
+
+  <!-- Preguntas Frecuentes -->
+  <div class="max-w-6xl mx-auto mt-12 p-8 bg-white shadow-xl rounded-lg">
+    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Preguntas Frecuentes</h3>
+    <ul class="space-y-4 text-gray-700">
+      <li>
+        <strong>¿Dónde puedo comprar los uniformes?</strong>
+        <p>Los uniformes están disponibles en la tienda oficial del colegio, ubicada en la entrada principal.</p>
+      </li>
+      <li>
+        <strong>¿Qué hago si no encuentro mi talla?</strong>
+        <p>Contacta a la administración para solicitar un uniforme hecho a medida.</p>
+      </li>
+      <li>
+        <strong>¿Puedo personalizar mi uniforme?</strong>
+        <p>No, el diseño debe mantenerse intacto para respetar las políticas de la institución.</p>
+      </li>
+    </ul>
   </div>
 </section>
+

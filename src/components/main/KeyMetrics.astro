@@ -1,25 +1,40 @@
 ---
-// src/components/Metrics.astro
 const metrics = [
   { value: '+1,134', label: 'Estudiantes' },
   { value: '+87%', label: 'Ahorro de Tiempo' },
   { value: '+6', label: 'Especialidades' },
-  { value: '+99.9%', label: 'Estudiantes Satisfechos' }
+  { value: '+99.9%', label: 'Estudiantes Satisfechos' },
 ];
 ---
 
-<div class="w-full flex items-center justify-center mx-auto">
-  <div class="text-center">
-    <h2 class="text-black text-3xl lg:text-5xl font-bold mb-2">Contamos con +40 Años de Experiencia</h2>
-    <p class="text-gray-500 text-xl mb-6">A snapshot of our most important numbers.</p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {metrics.map((metric) => (
-        <div class="bg-[#FAF6F8] p-5 lg:py-12 lg:px-11 rounded-lg shadow-lg flex flex-col items-center transition-all duration-300 hover:bg-zinc-200 hover:text-white hover:shadow-2xl">
-          <h2 class="text-black text-3xl lg:text-5xl font-bold">{metric.value}</h2>
-          <p class="text-gray-600">{metric.label}</p>
-        </div>
-      ))}
-    </div>
+<div class="w-full flex flex-col items-center justify-center mx-auto py-16 bg-gradient-to-br via-white to-gray-50">
+  <!-- Título principal -->
+  <div class="text-center mb-10">
+    <h2 class="text-gray-800 text-4xl lg:text-5xl font-extrabold mb-4">
+      Contamos con +40 Años de Experiencia
+    </h2>
+    <p class="text-gray-600 text-lg lg:text-xl">
+      Conoce nuestros logros a través de estas cifras destacadas.
+    </p>
+  </div>
+
+  <!-- Métricas con diseño moderno -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl px-6">
+    {metrics.map((metric) => (
+      <div class="relative bg-gradient-to-br from-white to-blue-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-transform duration-500 ease-in-out hover:scale-105 group">
+        <!-- Efecto decorativo de borde en hover -->
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-50 via-blue-100 to-blue-100 rounded-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+        
+        <!-- Valor de la métrica -->
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-800 group-hover:text-gray-900 transition-colors duration-300 text-center">
+          {metric.value}
+        </h2>
+        
+        <!-- Descripción de la métrica -->
+        <p class="text-gray-500 group-hover:text-gray-600 transition-colors duration-300 text-center mt-2">
+          {metric.label}
+        </p>
+      </div>
+    ))}
   </div>
 </div>
-

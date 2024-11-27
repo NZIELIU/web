@@ -1,35 +1,44 @@
 ---
-// src/components/Abanderados.astro
 const abanderados = [
   {
     nombre: "Juan Pérez",
     descripcion: "Abanderado de Matemáticas, destacado en olimpiadas y concursos.",
+    imagen: "/images/juan.jpg",
   },
   {
     nombre: "María Gómez",
     descripcion: "Abanderada de Ciencias, reconocida por sus proyectos de investigación.",
+    imagen: "/images/maria.jpg",
   },
   {
     nombre: "Pedro Rodríguez",
     descripcion: "Abanderado de Humanidades, destacado en oratoria y debate.",
-  }
+    imagen: "/images/pedro.jpg",
+  },
 ];
 ---
 
-<section class="text-center mx-auto px-6 py-16">
-  <h2 class="text-3xl font-bold text-black mb-4">Nuestros Abanderados</h2>
-  <h3 class="font-semibold text-gray-500 mb-8">Conoce a los estudiantes destacados que han sido elegidos como abanderados de nuestro colegio.</h3>
+<section class="py-16">
+  <div class="text-center max-w-4xl mx-auto px-6">
+    <h2 class="text-4xl font-extrabold text-gray-800 mb-6">Nuestros Abanderados</h2>
+    <p class="text-lg text-gray-600 mb-12">
+      Conoce a los estudiantes destacados que nos representan con su dedicación, esfuerzo y logros sobresalientes.
+    </p>
+  </div>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 max-w-7xl mx-auto">
     {abanderados.map((abanderado) => (
-      <div class="transition-transform duration-300 transform hover:scale-105 hover:bg-gray-200 rounded-lg p-6">
-        <div class="w-24 h-24 mx-auto rounded-full bg-gray-300 border-4 border-gray-600 shadow-md transition duration-300 transform hover:scale-110">
-          {/* Aquí puedes agregar una imagen */}
+      <div class="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6">
+        <div class="relative w-24 h-24 mx-auto rounded-full overflow-hidden border-4 border-gray-300 shadow-md mb-4 transform group-hover:scale-110 transition-transform duration-300">
+          <img 
+            src={abanderado.imagen} 
+            alt={abanderado.nombre} 
+            class="w-full h-full object-cover"
+          />
         </div>
-        <h3 class="text-xl text-gray-900 font-semibold mt-4">{abanderado.nombre}</h3>
-        <p class="text-gray-700 mt-2">{abanderado.descripcion}</p>
+        <h3 class="text-xl font-semibold text-gray-800 text-center mb-2">{abanderado.nombre}</h3>
+        <p class="text-gray-600 text-center">{abanderado.descripcion}</p>
       </div>
     ))}
   </div>
 </section>
-

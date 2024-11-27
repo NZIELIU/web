@@ -23,60 +23,62 @@ const getEventForDate = (date) => {
 };
 ---
 
-<div class="text-primary container mx-auto px-6 text-center">
-  <h2 class="text-4xl md:text-5xl font-bold mb-4">Calendario Escolar</h2>
+<div class="text-primary container mx-auto px-6 text-center mb-2">
+  <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-800">Calendario Escolar</h2>
+  <p class="font-medium text-lg text-gray-600">Consulta los eventos importantes de este mes en nuestro calendario escolar.</p>
 </div>
-<br>
-<div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl m-4">
-<div class="p-8">
-  <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold mb-1">Calendario Escolar</div>
-  <h2 class="block mt-1 text-lg leading-tight font-medium text-black">{monthName}</h2>
-  <div class="mt-4 grid grid-cols-7 gap-2 text-xs md:text-base">
-    {['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'].map(day => (
-      <div class="text-center font-bold">{day}</div>
-    ))}
-    {Array.from({ length: firstDayOfMonth }).map((_, index) => (
-      <div key={`empty-${index}`}></div>
-    ))}
-    {Array.from({ length: daysInMonth }).map((_, index) => {
-      const date = index + 1;
-      const event = getEventForDate(date);
-      return (
-        <div class="relative">
-          <div class={`text-center p-1 ${currentDate.getDate() === date ? 'bg-indigo-100 rounded-full' : ''}`}>
-            {date}
+
+<div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden m-4">
+  <div class="p-6">
+    <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold mb-1">Calendario Escolar</div>
+    <h2 class="block mt-1 text-lg font-medium text-gray-800">{monthName}</h2>
+
+    <div class="mt-4 grid grid-cols-7 gap-2 text-xs md:text-base">
+      {['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'].map(day => (
+        <div key={day} class="text-center font-bold text-gray-700">{day}</div>
+      ))}
+
+      {/* Días vacíos hasta el primer día del mes */}
+      {Array.from({ length: firstDayOfMonth }).map((_, index) => (
+        <div key={`empty-${index}`} className="text-center"></div>
+      ))}
+
+      {/* Días del mes */}
+      {Array.from({ length: daysInMonth }).map((_, index) => {
+        const date = index + 1;
+        const event = getEventForDate(date);
+        return (
+          <div key={date} className="relative">
+            <div
+              class={`cursor-pointer text-center p-2 rounded-full transition-transform duration-300 transform hover:scale-110 
+                ${currentDate.getDate() === date ? 'bg-indigo-100 text-indigo-600' : 'text-gray-800 hover:bg-gray-200'} `}
+              onClick={() => {
+                if (event) {
+                  alert(`Evento: ${event.title} - ${format(event.date, 'd MMMM yyyy', { locale: es })}`);
+                }
+              }}
+            >
+              {date}
+            </div>
+            {event && (
+              <div class={`absolute bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 rounded-full ${event.color}`}></div>
+            )}
           </div>
-          {event && (
-            <div class={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-2 rounded-full ${event.color}`}></div>
-          )}
-        </div>
-      );
-    })}
+        );
+      })}
+    </div>
+  </div>
+
+  <div class="px-6 py-4 bg-gray-50">
+    <h3 class="text-sm font-semibold text-gray-700 mb-2">Eventos del Mes</h3>
+    <ul class="space-y-2">
+      {events.map(event => (
+        <li key={event.date} class="flex items-center hover:bg-gray-100 p-2 rounded-md transition-colors duration-300">
+          <span class={`w-3 h-3 rounded-full mr-2 ${event.color}`}></span>
+          <span class="text-sm">{format(event.date, 'd')} - {event.title}</span>
+        </li>
+      ))}
+    </ul>
   </div>
 </div>
-<div class="px-8 py-4 bg-gray-50">
-  <h3 class="text-sm font-semibold text-gray-700 mb-2">Eventos del Mes</h3>
-  <ul class="space-y-2">
-    {events.map(event => (
-      <li class="flex items-center">
-        <span class={`w-3 h-3 rounded-full mr-2 ${event.color}`}></span>
-        <span class="text-sm">{format(event.date, 'd')} - {event.title}</span>
-      </li>
-    ))}
-  </ul>
-</div>
-</div>
-<br>
 
-<script>
-const calendarDays = document.querySelectorAll('.relative');
-calendarDays.forEach(day => {
-  day.addEventListener('click', () => {
-    const date = day.querySelector('div').textContent;
-    const event = events.find(e => e.date.getDate() === parseInt(date));
-    if (event) {
-      alert(`Evento: ${event.title} - ${format(event.date, 'd MMMM yyyy', { locale: es })}`);
-    }
-  });
-});
-</script>

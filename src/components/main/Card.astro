@@ -8,27 +8,27 @@ import Sell from "@/icons/speciality/Sell.astro";
 
 const TAGS = {
     ELECTRONIC: {
-        class: "text-[#000000]",
+        class: "text-blue-500",
         icon: Electronic,
     },
     MECHANIC: {
-        class: "text-[#000000]",
+        class: "text-red-500",
         icon: Mechanic,
     },
     INFORMATIC: {
-        class: "text-[#000000]",
+        class: "text-green-500",
         icon: Informatic,
     },
     GENERAL: {
-        class: "text-[#000000]",
+        class: "text-yellow-500",
         icon: General,
     },
     ELECTRICITY: {
-        class: "text-[#000000]",
+        class: "text-purple-500",
         icon: Electricity,
     },
     SELL: {
-        class: "text-[#000000]",
+        class: "text-pink-500",
         icon: Sell,
     },
 };
@@ -68,27 +68,41 @@ const SPECIALITY = [
         title: "Ciencias Generales",
         icon: [TAGS.GENERAL],
         content:
-            "Ofrece una formación en áreas científico-humanísticas, mediante las asignaturas del tronco común, y podrán tener componentes y menciones específicas y especializadas. ",
+            "Ofrece una formación en áreas científico-humanísticas, mediante las asignaturas del tronco común, y podrán tener componentes y menciones específicas y especializadas.",
     },
 ];
 ---
 
-<!-- Contenedor principal centrado -->
-<div class="container mx-auto px-6 text-left">
-    <h2 class="text-4xl md:text-5xl font-bold mb-4">Especialidades Técnicas</h2>
+<!-- Contenedor principal -->
+<div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-gray-800">
+        Especialidades Técnicas
+    </h2>
 </div>
 
-<br>
-
-<!-- Sección de especialidades con una cuadrícula responsiva -->
-<article class="mb-10 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto px-4">
+<!-- Sección de especialidades con diseño moderno -->
+<article class="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto px-4">
     {SPECIALITY.map(({ title, icon, content }) => (
-        <div class="text-black text-left block max-w-sm p-6 bg-white border border-gray-500 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300 ease-in-out cursor-pointer mx-auto">
+        <div class="relative group text-left block max-w-sm p-6 bg-gradient-to-br from-white to-gray-100 border border-gray-300 rounded-lg shadow-lg hover:shadow-2xl transition-transform duration-500 ease-in-out hover:scale-105 mx-auto">
+            <!-- Efecto decorativo en el borde superior -->
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-purple-500 group-hover:opacity-100 transition-opacity duration-300 opacity-0"></div>
+            
+            <!-- Ícono -->
             {icon.map((tag) => (
-                <tag.icon class="text-black mb-4 w-12 h-12 my-2 mx-auto" />
+                <tag.icon
+                    class={`${tag.class} mb-4 w-14 h-14 mx-auto transition-transform duration-300 transform group-hover:scale-110`}
+                />
             ))}
-            <h3 class="text-xl mb-2 font-medium text-black text-center">{title}</h3>
-            <p class="font-normal text-gray-400 text-center">{content}</p>
+
+            <!-- Título -->
+            <h3 class="text-2xl font-bold text-gray-800 mb-2 text-center group-hover:text-blue-600 transition-colors duration-300">
+                {title}
+            </h3>
+
+            <!-- Descripción -->
+            <p class="font-medium text-gray-500 text-center group-hover:text-gray-700 transition-colors duration-300">
+                {content}
+            </p>
         </div>
     ))}
 </article>
