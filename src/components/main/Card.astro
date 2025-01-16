@@ -8,27 +8,27 @@ import Sell from "@/icons/speciality/Sell.astro";
 
 const TAGS = {
     ELECTRONIC: {
-        class: "text-blue-500",
+        class: "text-black",
         icon: Electronic,
     },
     MECHANIC: {
-        class: "text-red-500",
+        class: "text-black",
         icon: Mechanic,
     },
     INFORMATIC: {
-        class: "text-green-500",
+        class: "text-black",
         icon: Informatic,
     },
     GENERAL: {
-        class: "text-yellow-500",
+        class: "text-black",
         icon: General,
     },
     ELECTRICITY: {
-        class: "text-purple-500",
+        class: "text-black",
         icon: Electricity,
     },
     SELL: {
-        class: "text-pink-500",
+        class: "text-black",
         icon: Sell,
     },
 };
@@ -90,7 +90,7 @@ const SPECIALITY = [
             <!-- Ícono -->
             {icon.map((tag) => (
                 <tag.icon
-                    class={`${tag.class} mb-4 w-14 h-14 mx-auto transition-transform duration-300 transform group-hover:scale-110`}
+                    class={`text-black mb-4 w-14 h-14 mx-auto transition-transform duration-300 transform group-hover:scale-110`}
                 />
             ))}
 
@@ -100,9 +100,9 @@ const SPECIALITY = [
             </h3>
 
             <!-- Descripción -->
-            <p class="font-medium text-gray-500 text-center group-hover:text-gray-700 transition-colors duration-300">
+            <p class="font-medium text-gray-500 group-hover:text-gray-700 transition-colors duration-300">
                 {content}
             </p>
         </div>
     ))}
-</article>
+</article> 
